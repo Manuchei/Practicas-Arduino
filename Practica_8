@@ -1,0 +1,14 @@
+#include <Wire.h> 
+#include <LiquidCrystal_I2C.h>
+LiquidCrystal_I2C lcd(0x27,20,4);  
+void setup() { 
+}
+void loop() {
+  lcd.init();
+  lcd.backlight();
+   lcd.setCursor(0, 1);
+  lcd.print(millis()/1000);
+  lcd.print(" Segundos ");
+  lcd.print("Me llamo Manuel ");
+  delay(100);
+}
